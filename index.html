@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud Computing</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .box {
+            padding: 40px;
+            text-align: center;
+            color: white;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #00c6ff;
+            color: white;
+            cursor: pointer;
+        }
+
+        #msg {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>☁️ Cloud Computing</h1>
+    <p>Enter your name</p>
+
+    <input id="name" placeholder="Your Name">
+    <button onclick="welcome()">Submit</button>
+
+    <div id="msg"></div>
+</div>
+
+<script>
+function welcome() {
+    let name = document.getElementById("name").value;
+
+    document.getElementById("msg").innerHTML =
+        name ? "Hello " + name + ", Welcome to Cloud Computing! ☁️"
+             : "Please enter your name!";
+}
+</script>
+
+</body>
+</html>
